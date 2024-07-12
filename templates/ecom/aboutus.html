@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../../static/images/logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CUBE TRADERS</title>
+  <style media="screen">
+    body{
+      background-image: rgb(136, 136, 240);
+    }
+    .footer{
+      position: fixed;
+    }
+    h3{
+      text-align: center;
+    }
+    /* img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+    } */
+  </style>
+</head>
+<br><br><br><br><br><br><br>
+<body style="background-color:#badaf3;">
+    {%if request.user.is_authenticated%}
+      {% include "ecom/customer_navbar.html" %}
+    {%else%}
+      {% include "ecom/navbar.html" %}
+    {%endif%}
+  <br><br><br>
+<img src="../../static/images/logo.jpg" style="width: 20%; display: block; margin-left: auto; margin-right: auto;"><br>
+<h3>Cube Traders is a smart, passionate builder with different backgrounds and goals, who share a common <br>desire to always be learning and inventing on behalf of our customers. We believe that if you’re not left with an<br> amazing experience, we haven’t done our job. We don’t measure success through <br>achievements or awards, but through the satisfaction of our customers.</h3>
+<br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+</html>
